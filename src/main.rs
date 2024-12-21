@@ -1,3 +1,9 @@
+mod utils;
+use utils::reader::Reader;
+
+const IMAGE_PATH: &str = "path/to/image";
 fn main() {
-    println!("Hello, world!");
+    let reader: Reader = Reader::new(IMAGE_PATH.to_string());
+
+    reader.read();
 }
