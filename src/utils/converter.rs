@@ -40,7 +40,7 @@ impl Converter {
             .write(true)
             .create(true)
             .truncate(true)
-            .open("output.quiche")
+            .open("output.mamalon")
         {
             Ok(f) => f,
             Err(e) => panic!("Error opening file: {}", e),
