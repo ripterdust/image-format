@@ -7,7 +7,9 @@ fn main() {
 
     converter.convert();
 
-    let reader: Reader = Reader::new();
+    let mut reader: Reader = Reader::new("output.quiche".to_string());
 
     reader.read();
+
+    reader.print();
 }
