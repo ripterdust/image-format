@@ -39,6 +39,7 @@ impl Converter {
         let mut file = match OpenOptions::new()
             .write(true)
             .create(true)
+            .truncate(true)
             .open("output.quiche")
         {
             Ok(f) => f,
