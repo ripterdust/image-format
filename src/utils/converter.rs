@@ -3,14 +3,14 @@ use std::{fs::OpenOptions, io::Write};
 
 use image::GenericImageView;
 
-pub struct Reader {
+pub struct Converter {
     pub image_path: String,
     pixels: Vec<String>,
 }
 
-impl Reader {
-    pub fn new(path: String) -> Reader {
-        return Reader {
+impl Converter {
+    pub fn new(path: String) -> Converter {
+        return Converter {
             image_path: path,
             pixels: Vec::new(),
         };
@@ -28,7 +28,7 @@ impl Reader {
 
         for (x, _y, pixel) in image.pixels() {
             let mut hex: String = format!(
-                "#{:02X}{:02X}{:02X}{:02X}",
+                "#{:02X}{:02X}{:02X}{:02X} ",
                 pixel[0], pixel[1], pixel[2], pixel[3]
             );
 
