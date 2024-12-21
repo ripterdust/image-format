@@ -1,9 +1,11 @@
 mod utils;
 use utils::reader::Reader;
 
-const IMAGE_PATH: &str = "path/to/image";
+const IMAGE_PATH: &str = "./download.jpg";
 fn main() {
-    let reader: Reader = Reader::new(IMAGE_PATH.to_string());
+    let mut reader: Reader = Reader::new(IMAGE_PATH.to_string());
 
-    reader.read();
+    reader.convert();
+
+    println!("Image read successfully!");
 }
