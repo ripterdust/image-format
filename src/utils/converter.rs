@@ -49,5 +49,7 @@ impl Converter {
         if let Err(e) = file.write_all(self.pixels.join(" ").as_bytes()) {
             panic!("Error writing to file: {}", e);
         }
+
+        println!("Image converted successfully!");
     }
 }
